@@ -28,6 +28,11 @@ anonymized_drive_data/
 draft_labels/
 dataset_draft/
 dataset/
+dataset_v2/
+raw_new_images/
+du_lieu/
+preview_samples/
+
 raw_images/
 raw_videos/
 
