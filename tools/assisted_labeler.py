@@ -37,7 +37,7 @@ def auto_detect_candidates(images_dir, output_labels_dir, conf_thresh=0.25, filt
     vehicle_classes = [2, 7] # 2: car, 7: truck (COCO ids)
     
     img_exts = {".jpg", ".jpeg", ".png", ".bmp", ".webp"}
-    images = sorted(p for p in images_dir.glob("*") if p.suffix.lower() in img_exts)
+    images = sorted(p for p in images_dir.rglob("*") if p.suffix.lower() in img_exts and "__MACOSX" not in p.parts)
     
     print(f"Running candidate detection on {len(images)} images...")
     
@@ -72,7 +72,9 @@ def auto_detect_candidates(images_dir, output_labels_dir, conf_thresh=0.25, filt
                 lines.append(f"0 {cx:.6f} {cy:.6f} {nw:.6f} {nh:.6f}")
                 greensm_box_count += 1
                 
-        label_file = output_labels_dir / f"{img_path.stem}.txt"
+        rel = img_path.relative_to(images_dir)
+        label_file = output_labels_dir / rel.with_suffix(".txt")
+        label_file.parent.mkdir(parents=True, exist_ok=True)
         label_file.write_text("\n".join(lines) + ("\n" if lines else ""), encoding="utf-8")
         
         if not lines:
