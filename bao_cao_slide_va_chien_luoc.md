@@ -108,18 +108,27 @@ Chỉ số `mAP@[.50:.95]` tính trung bình qua 10 ngưỡng IoU (từ 0.50 đ�
 
 Sau 15:30, các đội có 20–30 phút để nộp slide. Dưới đây là cấu trúc chuẩn 6 Slide ăn trọn điểm:
 
-### Slide 1: Tiêu đề & Giới thiệu
+### Slide 1: Tiêu đề & Đội thi
 - **Tiêu đề**: GreenSM Detection - Phương Pháp Tiếp Cận Đột Phá Bằng Data-Centric
-- **Đội thi**: Group 23 (Seed: 21) · VinUni AI In Action
-- **Thông điệp cốt lõi**: *"Cố định YOLOv8n, chiến thắng bằng chất lượng và độ khít của dữ liệu"*
+- **Đội thi**: L2B - Nhóm 23 (Seed: 21) · VinUni AI In Action
+- **Thành viên & Vai trò**:
+  + **Trần Thị Thủy Tiên (Lead)**: Tổng hợp báo cáo, làm slide, điều phối, vận hành Colab huấn luyện & nộp bài.
+  + **Đào Ngọc Hiếu**: Phát triển bộ tool tự động (che biển số xe, cắt frame, assisted labeling).
+  + **Đoàn Diệu Linh**: Khai thác video giao thông YouTube, trích xuất frame, làm mờ biển số.
+  + **Hoàng Công Chứ**: Khai thác video giao thông YouTube, trích xuất frame, làm mờ biển số.
+  + **Đỗ Trung Kiên**: Thu thập video thực tế (tự quay) GreenSM ngoài đường phố, cắt frame, làm mờ biển số.
+- **Thông điệp cốt lõi**: *"Kiến trúc cố định, chiến thắng bằng chất lượng và độ khít của dữ liệu"*
 
 ### Slide 2: Thu thập dữ liệu & Data Diversity
-- **Quy trình thu thập**: Quay video và chụp ảnh thực tế tại các tuyến đường đô thị.
+- **Quy trình thu thập đa nguồn**:
+  + **Nguồn 1 (Thực tế tự quay - Đỗ Trung Kiên)**: Video quay ngoài đường phố cận cảnh taxi Xanh SM (VF e34, VF 5, VF 8) ở nhiều góc độ (chéo 45°, chính diện, đuôi xe).
+  + **Nguồn 2 (Video giao thông - Linh & Chứ)**: Video đường phố đô thị Việt Nam (Hà Nội, TP.HCM), đa dạng mật độ xe cộ và điều kiện ánh sáng.
+  + **Xử lý quyền riêng tư & bảo mật**: 100% frame được chạy qua tool `blur_license_plates.py` để che biển số xe tự động trước khi gán nhãn.
 - **Đa dạng miền dữ liệu**:
-  + Góc chụp: Chính diện, góc chéo 45 độ, đuôi xe, chụp từ vỉa hè / trên cao.
-  + Điều kiện: Nắng gắt, bóng râm, chạng vạng tối.
-  + Cự ly: Cận cảnh (xe lớn chiếm >50% khung hình) và xe ở xa (nhỏ 5-10%).
-  + Ảnh chụp màn hình: Minh chứng thư mục ảnh gốc thô và thiết bị quay chụp.
+  + Góc chụp: Chính diện, chéo 45 độ, ngang hông, chụp từ vỉa hè / trên cao.
+  + Điều kiện: Ban ngày, trời râm, nắng gắt, chạng vạng chiều tối.
+  + Cự ly: Cận cảnh (>50% ảnh) và xe ở xa (5-10% ảnh).
+  + Ảnh chụp màn hình minh chứng: Thư mục video gốc, ảnh thô và nhật ký công cụ.
 
 ### Slide 3: Label Guideline & Quy Trình QA Chặt Chẽ
 - **Quy tắc gán nhãn**:

@@ -5,6 +5,13 @@
 - **Seed cố định (ô TEAM_ID)**: `21`
 - **Đối tượng nhận diện**: Duy nhất lớp `0 = GreenSM` (Taxi điện GSM trên đường phố Việt Nam).
 
+### Thành viên & Phân công nhiệm vụ:
+- **Trần Thị Thủy Tiên (Lead)**: Tổng hợp viết báo cáo, làm slide, điều phối chung, chạy notebook huấn luyện & nộp bài (`train_and_export.ipynb`).
+- **Đào Ngọc Hiếu**: Xây dựng & tối ưu code làm mờ biển số xe, cắt frame, tool gán nhãn bán tự động.
+- **Đoàn Diệu Linh**: Tìm kiếm video giao thông (YouTube), trích xuất frame cho dataset, làm mờ biển số xe.
+- **Hoàng Công Chứ**: Tìm kiếm video giao thông (YouTube), trích xuất frame cho dataset, làm mờ biển số xe.
+- **Đỗ Trung Kiên**: Thu thập video thực tế (tự quay) taxi GreenSM, trích xuất frame, làm mờ biển số xe.
+
 ---
 
 ## Cấu trúc thư mục
