@@ -1,12 +1,12 @@
 # CHIẾN LƯỢC TÁC CHIẾN & KHUNG BÁO CÁO HACKATHON
 ## GreenSM Data Centric Challenge · VinUni AI In Action (AI20k)
-**Đội thi: Group 23 | Mã số đội (Seed): 21 | Hạn chót nộp bài: 15:30 (04/10/2026)**
+**Đội thi: L2B - Nhóm 23 | Mã số đội (Seed): 21 | Hạn chót nộp bài: 15:30 (04/10/2026)**
 
 ---
 
 ## 1. THÔNG SỐ VÀ LUẬT BẮT BUỘC (CẦN NHỚ KỸ)
 
-| Hạng mục | Quy định ban tổ chức | Hành động đội Group 23 |
+| Hạng mục | Quy định ban tổ chức | Hành động đội L2B - Nhóm 23 |
 |---|---|---|
 | **Mã số đội (Seed)** | Bắt buộc điền đúng `TEAM_ID` | Đã cấu hình cố định `TEAM_ID = 21` vào [train_and_export.ipynb](file:///c:/Users/tient/Downloads/Group_23/train_and_export.ipynb) |
 | **Mô hình cố định** | `YOLOv8n` (`yolov8n.pt`), `imgsz=640` | Không thay đổi kiến trúc mô hình |

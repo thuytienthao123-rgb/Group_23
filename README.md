@@ -1,8 +1,9 @@
-# GreenSM Data Centric Challenge - Group 23
+# GreenSM Data Centric Challenge - L2B - Nhóm 23
 **VinUni AI In Action (AI20k) · Day 15 Capstone Hackathon**
 
-Mã số đội / Seed huấn luyện: **23** (hoặc seed được cấp bởi BTC)  
-Đối tượng nhận diện: Duy nhất lớp `0 = GreenSM` (Taxi điện GSM trên đường phố Việt Nam).
+- **Tên đội**: `L2B - Nhóm 23`
+- **Seed cố định (ô TEAM_ID)**: `21`
+- **Đối tượng nhận diện**: Duy nhất lớp `0 = GreenSM` (Taxi điện GSM trên đường phố Việt Nam).
 
 ---
 
