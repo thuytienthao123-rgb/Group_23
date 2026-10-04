@@ -32,6 +32,10 @@ dataset_v2/
 raw_new_images/
 du_lieu/
 preview_samples/
+anylabeling_workspace/
+team_label_packages/
+dataset_final/
+
 
 raw_images/
 raw_videos/
