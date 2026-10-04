@@ -22,6 +22,15 @@ submission/
 *.mov
 *.avi
 
+# Dataset local folders
+raw_drive_data/
+anonymized_drive_data/
+draft_labels/
+dataset_draft/
+dataset/
+raw_images/
+raw_videos/
+
 # OS files
 .DS_Store
 Thumbs.db
