@@ -31,11 +31,14 @@ def convert_json_to_yolo(json_path: Path, class_mapping=None):
 
     yolo_lines = []
     shapes = data.get("shapes", [])
-    for shape in shapes:
         label = str(shape.get("label", "GreenSM")).strip().lower()
-        cls_id = class_mapping.get(label, 0) # default to 0 for GreenSM
-        
-        points = shape.get("points", [])
+        # Drop person / pedestrian labels completely
+        if label in ["person", "people", "pedestrian", "nguoi", "người", "human"]:
+            continue
+        if label not in class_mapping:
+            continue
+        cls_id = class_mapping[label]
+
         if len(points) < 2:
             continue
             
