@@ -1,0 +1,27 @@
+# Python & Jupyter
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# Virtual Environment
+venv/
+env/
+.env
+
+# YOLO & Model weights
+*.pt
+runs/
+work/
+submission/
+
+# Large archives (keep raw code & guidelines clean)
+*.zip
+*.tar.gz
+*.mp4
+*.mov
+*.avi
+
+# OS files
+.DS_Store
+Thumbs.db
